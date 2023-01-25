@@ -1,4 +1,5 @@
 import About from "../pages/About";
+import Converter from "../pages/Converter";
 import Login from "../pages/Login";
 import Oprosnik from "../pages/Oprosnik";
 import Pogoda from "../pages/Pogoda";
@@ -12,6 +13,7 @@ export const privateroutess=[
     {path: '/posts/:id',element:PostsIdPage,exact:true},
     {path: '/pogoda',element:Pogoda,exact:true},
     {path: '/oprosnik',element:Oprosnik,exact:true},
+    {path: '/converter',element:Converter,exact:true},
 
 ]
 

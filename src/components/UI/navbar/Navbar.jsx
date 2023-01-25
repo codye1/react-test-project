@@ -22,6 +22,7 @@ const Navbar = () => {
             <Link to="/posts">Посты</Link>
             <Link to='/pogoda'>Погода</Link>
             <Link to='/oprosnik'>Опрос</Link>
+            <Link to='/converter'>Конвертер</Link>
         </div>
     </div>
     );
