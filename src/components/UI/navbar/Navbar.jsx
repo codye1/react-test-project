@@ -21,6 +21,7 @@ const Navbar = () => {
             <Link to="/about">Эбаут</Link>
             <Link to="/posts">Посты</Link>
             <Link to='/pogoda'>Погода</Link>
+            <Link to='/oprosnik'>Опрос</Link>
         </div>
     </div>
     );
