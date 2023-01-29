@@ -15,12 +15,12 @@ interface Logins{
 
 const Login: React.FC<Logins>= () => {
 
-    let {isAuth,setIsAuth} = useAuth()
+    let {isAuth,stIsAuth} = useAuth()
 
 
     const sumbit = (event:React.FormEvent<HTMLFormElement>)=>{
         event.preventDefault()
-        setIsAuth && setIsAuth(true)
+        stIsAuth && stIsAuth(true)
         localStorage.setItem('auth','true')
     }
 

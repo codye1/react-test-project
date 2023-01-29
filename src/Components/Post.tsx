@@ -1,10 +1,28 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
+import { useNavigate } from 'react-router-dom';
+import MyButton from '../UI/MyButton/MyButton';
+import APIPost from '../utils';
 
-const Post = () => {
+interface PropsPost{
+  post:APIPost
+}
+
+const Post:React.FC<PropsPost> = ({post}) => {
+    const router = useNavigate()
     return (
-        <div>
+        <div className="post">
+        <div className="post__content">
+        <strong>{post.id}.{post.title}</strong>
+          <div>
+              {post.body}
+          </div>
 
         </div>
+        <div className="post__btns">
+            <MyButton onClick={()=>console.log('comments')}>Comments</MyButton>
+            <MyButton onClick={()=> console.log('remove')}>Delete</MyButton>
+        </div>
+      </div>
     );
 };
 

@@ -6,6 +6,7 @@ type ContextValue = {
     isLoading?: boolean
     setIsAuth?: (b:boolean) => void
     setIsLoading?: (b:boolean) => void
+    stIsAuth?:(b:boolean) => void
    }
 const AuthContext =createContext<ContextValue | null>(null)
 

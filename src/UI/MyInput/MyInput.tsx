@@ -1,5 +1,6 @@
 import { type } from 'os';
-import React from 'react';
+import React,{useRef} from 'react';
+import { useHref } from 'react-router-dom';
 import './MyInput.css'
 
 interface InputS{
@@ -8,8 +9,9 @@ interface InputS{
 }
 
 const MyInput: React.FC<InputS> = React.forwardRef((props) => {
+    const ref = useRef<HTMLInputElement>(null)
     return (
-        <input className={'myInput'} {...props}/>
+        <input ref={ref} className={'myInput'} {...props}/>
     );
 });
 
