@@ -5,7 +5,6 @@ import { privateroutess, publicroutess } from './Router';
 import {useAuth } from '../context/context';
 import MyLoader from '../UI/MyLoader/MyLoader';
 import Post from './Post';
-
 interface AppR{
 
 }
@@ -30,10 +29,8 @@ const AppRouter: React.FC<AppR> = () => {
     return (
       isAuth
         ?<Routes>
-        {privateroutess.map((route, index) => {
-            return (
-                <Route key = {index} path = {route.path} element={<route.element />}/>
-            )})}
+        {privateroutess.map((route, index) => <Route key = {index} path = {route.path} element={<route.element />}/>
+            )}
         <Route path = "*" element = {<Navigate to = "/posts" replace/>}/>
         </Routes>
         :<Routes>

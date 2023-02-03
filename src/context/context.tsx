@@ -23,7 +23,7 @@ export const useAuth = () => {
   type AuthProviderProps = PropsWithChildren
 
   export const AuthProvider = ({ children }: AuthProviderProps) => {
-    let [isAuth,setIsAuth]= useState(false)
+    let [isAuth,setIsAuth]= useState(true)
     const [isLoading,setIsLoading]=useState(false)
     return <AuthContext.Provider value={{
         isAuth,

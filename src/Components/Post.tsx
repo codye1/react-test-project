@@ -1,14 +1,16 @@
 import React, { PropsWithChildren } from 'react';
 import { useNavigate } from 'react-router-dom';
 import MyButton from '../UI/MyButton/MyButton';
-import APIPost from '../utils';
+import { posts } from '../Pages/Posts';
 
 interface PropsPost{
-  post:APIPost
+  post: posts
+  remove:(p: number | undefined ) => void
 }
 
-const Post:React.FC<PropsPost> = ({post}) => {
+const Post:React.FC<PropsPost> = ({post,remove}) => {
     const router = useNavigate()
+
     return (
         <div className="post">
         <div className="post__content">
@@ -19,8 +21,8 @@ const Post:React.FC<PropsPost> = ({post}) => {
 
         </div>
         <div className="post__btns">
-            <MyButton onClick={()=>console.log('comments')}>Comments</MyButton>
-            <MyButton onClick={()=> console.log('remove')}>Delete</MyButton>
+            <MyButton onClick={()=>router(`/posts/${post.id}`)}>Comments</MyButton>
+            <MyButton onClick={()=>remove(post.id)}>Delete</MyButton>
         </div>
       </div>
     );

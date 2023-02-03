@@ -22,6 +22,9 @@ const Navbar = () => {
             </MyButton>
         <div className="navbar__links">
             <Link to="/posts">Посты</Link>
+            <Link to="/pogoda">Погода</Link>
+            <Link to="/oprosnik">Опросник</Link>
+            <Link to="/converter">Конвертер</Link>
         </div>
     </div>
     );

@@ -5,6 +5,7 @@ import './App.css'
 
 import {AuthProvider, useAuth } from "./context/context";
 import Navbar from "./UI/Navbar";
+import { idText } from "typescript";
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
     <AuthProvider>
       <BrowserRouter>
         <Navbar/>
-        <AppRouter/>
+         <AppRouter/>
       </BrowserRouter>
     </AuthProvider>
   );
