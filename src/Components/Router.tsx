@@ -1,3 +1,4 @@
+
 import Converter from "../Pages/Converter"
 import Login from "../Pages/Login"
 import Oprosnik from "../Pages/Oprosnik"
@@ -11,6 +12,7 @@ export const privateroutess=[
     {path: '/pogoda',element:Pogoda,exact:true},
     {path: '/oprosnik',element:Oprosnik,exact:true},
     {path: '/converter',element:Converter,exact:true},
+
 ]
 
 export const publicroutess=[
